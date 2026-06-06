@@ -1,0 +1,264 @@
+
+.head-container {
+    min-height: 80vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav, .hero, .login {
+    position: relative;
+    z-index: 2;
+}
+
+.nav {
+    width: 100vw;
+    max-width: 1440px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 10em;
+}
+
+.red-btn {
+    background-color: red;
+    border: 1px solid rgba(251, 138, 138, 0.897);
+    border-radius: 5px;
+    color: white;
+    padding: 5px 24px;
+    font-size: 20px;
+}
+
+.red-btn:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.759);
+}
+
+.hero {
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero > h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.hero > p {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.login {
+    margin-top: 1.2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7em;
+}
+
+.email-in {
+    padding: 10px;
+    width: 25em;
+    height: 3em;
+    font-size: medium;
+    border: 1px solid rgb(127, 127, 127);
+    /* background-color: rgba(74, 74, 74, 0.463); */
+    backdrop-filter: blur(2px);
+    color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 7px rgb(120, 120, 120);
+}
+
+.seperator {
+    border-bottom: 2px solid rgba(163, 4, 4, 0.805);
+}
+
+.section {
+    max-width: 1344px;
+    width: 70vw;
+    margin: auto;
+    padding: 27px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.features > h2 {
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.features > p {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.side-img > img{
+    width: 80;
+    border-radius: 5px;
+}
+
+.faq-title {
+    max-width: 1440px;
+    width: 75vw;
+    margin: auto;
+    padding: 17px 5px;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.faq {
+    max-width: 1440px;
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.qna {
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: 5s;
+    overflow: hidden;
+    border: 0 solid white;
+}
+
+.qna > button {
+    border-width: 0px;
+}
+
+.dark-white-10 {
+    padding: 10px;
+    background-color: rgb(47, 47, 47);
+    color: rgba(255, 255, 255, 0.948);
+}
+
+.ques {
+    padding: 20px;
+    text-align: start;
+    font-size: x-large;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    transition: 0.5s;
+}
+
+.svg-sign {
+    display: grid;
+    align-items: center;
+}
+
+.svg-sign svg {
+    grid-area: 1 / 1;
+}
+
+.small-plus {
+    visibility: hidden;
+}
+
+/* Answer hidden by default */
+.ans {
+    font-size: large;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.qna.active .ques svg {
+    transform: rotate(45deg);
+}
+
+.ques {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ques:hover {
+    background-color: rgb(79, 79, 79);
+}
+
+.footer {
+    min-height: 70vh;
+}
+
+.f-cont {
+    padding-top: 50px;
+    width: 50vw;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+}
+
+.f-cont > p {
+    padding: 10px 0;
+    font-size: large;
+    font-weight: 700;
+    width: 80%;
+}
+
+@media (max-width: 840px) {
+    .login > input {
+        width: 20em;
+        height: 2.5em;
+        font-size: medium;
+    }
+
+    .section {
+        text-align: center;
+        max-width: 70vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .side-img > img{
+        width: 300px;
+        border-radius: 5px;
+    }
+
+    .ques {
+        padding: 10px;
+        font-size: large;
+        font-weight: 700;
+    }
+    
+    .ans {
+        font-size: medium;
+        font-weight: 300;
+    }
+
+    .small-plus {
+        visibility: visible;
+    }
+
+    .big-plus {
+        visibility: hidden;
+    }
+
+    .email-cont > input {
+        font-size: medium;
+        width: 70vw;
+    }
+}

@@ -1,0 +1,28 @@
+.bg-img {
+    position: absolute;
+    z-index: 1;
+}
+
+.bg-shadow {
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.9000) 0.000%, rgba(0, 0, 0, 0.8965) 8.500%, rgba(0, 0, 0, 0.8861) 17.00%, rgba(0, 0, 0, 0.8688) 25.50%, rgba(0, 0, 0, 0.8444) 34.00%, rgba(0, 0, 0, 0.8132) 42.50%, rgba(0, 0, 0, 0.7750) 51.00%, rgba(0, 0, 0, 0.7368) 59.50%, rgba(0, 0, 0, 0.7056) 68.00%, rgba(0, 0, 0, 0.6813) 76.50%, rgba(0, 0, 0, 0.6639) 85.00%, rgba(0, 0, 0, 0.6535) 93.50%, rgba(0, 0, 0, 0.6500) 102.0%);
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+}
+
+.bg-img > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@supports (object-fit: cover) 
+{
+    .bg-img > img
+    {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
